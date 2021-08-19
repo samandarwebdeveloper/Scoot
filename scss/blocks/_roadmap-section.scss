@@ -1,0 +1,101 @@
+// ===========ROADMAP SECTION========================
+.roadmap-section {
+    background-image: url('../../images/roadmap-line.png');
+    background-repeat: no-repeat;
+    background-position: calc(50% - 200px) calc(50% - 100px);
+}
+.roadmap-section__wrapper {
+    padding: 160px 0;
+}
+.roadmap__list {
+    @include list-unstyled;
+    display: flex;
+    flex-wrap: wrap;
+    .roadmap__item {
+        width: 350px;
+
+        .roadmap-item__image {
+            width: 96px;
+            height: 96px;
+            margin-bottom: 40px;
+        }
+        .roadmap-item__lead {
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: -1.07143px;
+            margin-bottom: 27px;
+            color: #495567;
+        }
+        .roadmap-item__text {
+            font-family: $font-stack;
+            font-size: 15px;
+            line-height: 25px;
+            color: #939CAA;
+        }
+    }
+    .roadmap__item ~ .roadmap__item {
+        margin-left: 30px;
+    }
+}
+@include breakpoint-down (768px) {
+    .roadmap-section {
+        background-image: url('../../images/roadmap-line2.png');
+        background-repeat: no-repeat;
+        background-position:  calc(50% - 240px) calc(50% - 160px);
+    }
+    .roadmap__list {
+        @include list-unstyled;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .roadmap__item {
+            width: 80%;
+            display: flex;
+            align-items: start;
+            justify-content: space-around;
+            margin-bottom: 40px;
+            .roadmap-item__image {
+                margin-right: 80px;
+                margin-bottom: 30px;
+            }
+        }
+        .roadmap__item ~ .roadmap__item {
+            margin-left: 0;
+        }
+    }
+}
+@include breakpoint-down (425px) {
+    .roadmap__item {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            .roadmap-item__image {
+                margin-right: auto;
+                margin-left: 30%;
+                margin-bottom: 30px;
+            }
+            .roadmap-item__lead {
+                font-size: 20px;
+                line-height: 28px;
+            
+        }
+        }
+        .roadmap__item ~ .roadmap__item {
+            margin-left: 0;
+        }
+    
+}
+@include breakpoint-down (320px) {
+    .roadmap__item {
+        
+        .roadmap-item__image {
+            margin-right: auto;
+            margin-left: 35%;
+            margin-bottom: 30px;
+        }
+    }
+}

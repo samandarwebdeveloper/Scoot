@@ -1,0 +1,20 @@
+// ==========SITE BUTTON=================
+.site__button {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    background-color: #FCB72B;
+    border: 1px solid transparent;
+    padding: 10px 38px;
+    transition: all 0.3s ease;
+}
+.site__button:hover {
+    background-color: #fff;
+    border: 1px solid #FCB72B;
+    color: #FCB72B;
+}
+.site__button:active {
+    filter: drop-shadow(5px 5px 5px);
+}

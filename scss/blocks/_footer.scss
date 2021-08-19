@@ -1,0 +1,124 @@
+// ========SITE FOOTER=====================
+.site-footer {
+    
+    background-color: #495567;
+    background-image: url('../../images/footer-img.png');
+    background-repeat: no-repeat;
+    background-position: calc(50% + 400px) calc(50% + 100px);
+}
+.footer-store {
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .store__lead {
+        width: 415px;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -2.14286px;
+        color: #FFFFFF;
+    }
+}
+.footer__wrapper {
+    background-color: #333A44;
+    padding: 35px 0;
+}
+.footer-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.navigation__footer-link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    color: #939CAA;
+    transition: all 0.2s ease;
+}
+.navigation__footer-link:hover {
+    color: #FCB72B;
+
+}
+.site-social__links {
+    .social__link {
+        text-decoration: none;
+        color: #FCB72B;
+        margin-left: 10px;
+        transition: all 0.2s ease;
+    }
+    .social__link:hover {
+        color: #fff;
+    }
+}
+@include breakpoint-down (768px) {
+    .site-footer {
+    
+        background-position: 50% calc(50% + 150px);
+    }
+    .footer-store {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        .store__lead {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+}
+@include breakpoint-down (425px) {
+    .site-footer {
+    
+        background-position: 80% 40%;
+    }
+    .footer-store {
+        padding-left: 10px;
+        padding-right: 10px;
+        .store__lead {
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+    .footer-wrap {
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+        .footer-nav {
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            .footer-list {
+               
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 70px;
+                .navigation__item {
+                    
+                    margin-left: 0;
+                    margin-bottom: 16px;
+                }
+                
+            }
+        }
+    }
+}
+@include breakpoint-down (375px) {
+    .site-footer {
+    
+        background-position: 75% 40%;
+    }
+    .footer-store  {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .appstore {
+        width: 113px;
+        height: 40px;
+    }
+    .googleplay {
+        width: 130px;
+        height: 40px;
+    }
+}

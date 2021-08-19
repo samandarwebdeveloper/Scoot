@@ -1,0 +1,105 @@
+// =======SITE HEADER====================
+.site-header {
+    background-color: #fff;
+    position: fixed;
+    z-index: 999;
+}
+.header {
+    width: 100%;
+    padding: 20px 0;
+}
+.hamburger {
+    display: none;
+    border: none;
+    background-color: transparent;
+    width: 20px;
+    height: 18px;
+}
+.hamburger-img {
+    display: block;
+    width: 20px;
+    height: 18px;
+}
+.mobile-navigation {
+    display: none;
+}
+.site-header__header-wrapper {
+    display: flex;
+    align-items: center;
+    .site__logo-link {
+        display: block;
+    }
+    .site__logo-image {
+        display: block;
+        width: 107px;
+        height: 28px;
+    }
+}
+.site__navigation {
+    margin-left: 58px;
+    margin-right: auto;
+    .navigation__list {
+        @include list-unstyled;
+        display: flex;
+    }
+    .navigation__item {
+
+    }
+    .navigation__item ~ .navigation__item {
+        margin-left: 32px;
+    }
+    .navigation__link {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 25px;
+        color: #939CAA;
+        transition: all 0.2s ease;
+    }
+    .navigation__link:hover {
+        color: #000;
+    }
+}
+@include breakpoint-down (425px) {
+    .hamburger {
+        display: block;
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    .header-button {
+        display: none;
+    }
+    .header-hidden {
+        display: none;
+    }
+    .site__logo-link {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mobile-navigation {
+        display: none;
+        .mobile-nav {
+            position: fixed;
+            top: 68px;
+            left: -58px;
+            width: 256px;
+            height: 100vh;
+            background-color: #333A44;
+            padding-top: 64px;
+            padding-left: 32px;
+            .mobile-list {
+                flex-direction: column;
+                margin-bottom: 200px;
+                .navigation__item {
+                    margin-left: 0;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}
+@include breakpoint-down (320px) {
+    .hamburger {
+        margin-left: 0;
+    }
+}
